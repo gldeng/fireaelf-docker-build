@@ -1,0 +1,12 @@
+# Use the base image with specified platform
+FROM --platform=linux/amd64 aelf/node:mainnet-v1.11.0
+
+# Copy the fireaelf file from the second image with specified platform
+COPY --from=ghcr.io/gldeng/firehose-aelf:d18de78 /app/fireaelf /app
+
+# Copy files from the third image using the specific digest for amd64
+COPY --from=gldeng/aelf-test-node@sha256:shac236654 /app/AElf.Launcher.* /app
+COPY --from=gldeng/aelf-test-node@sha256:shac236654 /app/AElf.Firehose.* /app
+
+# Set the entrypoint to /app/fireaelf
+ENTRYPOINT ["/app/fireaelf"]
