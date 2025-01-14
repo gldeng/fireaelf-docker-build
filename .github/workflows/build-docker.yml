@@ -21,7 +21,7 @@ jobs:
 
     strategy:
       matrix:
-        suffix: [localnet, mainnet]
+        suffix: [localnet, testnet, mainnet]
 
     outputs:
       tags: ${{ steps.meta.outputs.tags }}
