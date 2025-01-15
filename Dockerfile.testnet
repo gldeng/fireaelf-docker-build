@@ -1,5 +1,5 @@
 # Use the base image with specified platform
-FROM aelf/node:aelf/node:testnet-release-v1.12.2
+FROM aelf/node:testnet-release-v1.12.2
 
 # Copy the fireaelf file from the second image with specified platform
 COPY --from=ghcr.io/gldeng/firehose-aelf:edbade0 /app/fireaelf /app
