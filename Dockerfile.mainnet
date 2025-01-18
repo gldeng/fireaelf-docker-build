@@ -2,10 +2,10 @@
 FROM aelf/node:mainnet-v1.12.0
 
 # Copy the fireaelf file from the second image with specified platform
-COPY --from=ghcr.io/gldeng/firehose-aelf:edbade0 /app/fireaelf /app
+COPY --from=ghcr.io/gldeng/firehose-aelf:3014ec7 /app/fireaelf /app
 
-COPY --from=gldeng/aelf-test-node:sha72ef2bd /app/AElf.Launcher.* /app
-COPY --from=gldeng/aelf-test-node:sha72ef2bd /app/AElf.Firehose.* /app
+COPY --from=gldeng/aelf-test-node:shaaa47ee6 /app/AElf.Launcher.* /app
+COPY --from=gldeng/aelf-test-node:shaaa47ee6 /app/AElf.Firehose.* /app
 
 # Set the entrypoint to /app/fireaelf
 ENTRYPOINT ["/app/fireaelf"]

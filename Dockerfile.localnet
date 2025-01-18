@@ -2,7 +2,7 @@
 FROM aelf/node:mainnet-v1.12.0
 
 # Copy the fireaelf file from the second image with specified platform
-COPY --from=ghcr.io/gldeng/firehose-aelf:03f5ba1 /app/fireaelf /app
+COPY --from=ghcr.io/gldeng/firehose-aelf:3014ec7 /app/fireaelf /app
 
 # Copy files from the third image using the specific digest for amd64
 COPY --from=gldeng/aelf-test-node:shaaa47ee6 /app/appsettings* /app
