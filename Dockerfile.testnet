@@ -4,8 +4,8 @@ FROM aelf/node:testnet-release-v1.12.2
 # Copy the fireaelf file from the second image with specified platform
 COPY --from=ghcr.io/gldeng/firehose-aelf:3014ec7 /app/fireaelf /app
 
-COPY --from=gldeng/aelf-test-node:sha8a53db4 /app/AElf.Launcher.* /app
-COPY --from=gldeng/aelf-test-node:sha8a53db4 /app/AElf.Firehose.* /app
+COPY --from=gldeng/aelf-test-node:sha4130e95 /app/AElf.Launcher.* /app
+COPY --from=gldeng/aelf-test-node:sha4130e95 /app/AElf.Firehose.* /app
 
 # Set the entrypoint to /app/fireaelf
 ENTRYPOINT ["/app/fireaelf"]

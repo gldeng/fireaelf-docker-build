@@ -5,9 +5,9 @@ FROM aelf/node:mainnet-v1.12.0
 COPY --from=ghcr.io/gldeng/firehose-aelf:3014ec7 /app/fireaelf /app
 
 # Copy files from the third image using the specific digest for amd64
-COPY --from=gldeng/aelf-test-node:sha8a53db4 /app/appsettings* /app
-COPY --from=gldeng/aelf-test-node:sha8a53db4 /app/AElf.Launcher.* /app
-COPY --from=gldeng/aelf-test-node:sha8a53db4 /app/AElf.Firehose.* /app
+COPY --from=gldeng/aelf-test-node:sha4130e95 /app/appsettings* /app
+COPY --from=gldeng/aelf-test-node:sha4130e95 /app/AElf.Launcher.* /app
+COPY --from=gldeng/aelf-test-node:sha4130e95 /app/AElf.Firehose.* /app
 
 # Set the entrypoint to /app/fireaelf
 ENTRYPOINT ["/app/fireaelf"]
